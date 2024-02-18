@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="w-full lg:w-[85%] mx-auto">
+<body class="w-full lg:w-[85%] mx-auto theme-font">
 
     <header>
 
@@ -59,12 +59,14 @@
 
         <!-- banner section starts here -->
         <section class="bg-[url(images/banner.png)] bg-center bg-cover bg-no-repeat rounded-3xl relative">
-            <div class="pt-6 pb-[130px] flex flex-col justify-center items-center gap-4">
 
-                <h1 class="text-6xl font-extrabold text-white leading-relaxed">End-to-End Travel With <br> <span
+            <div class="pt-12 pb-[130px] flex flex-col justify-center items-center gap-4">
+
+                <h1 class="text-6xl font-extrabold text-white leading-normal">End-to-End Travel With <br> <span
                         class="text-[#1dd100] flex justify-center">P-Paribahan</span></h1>
 
-                <p class="text-white text-center w-[70%]">Yes, you can run unit tests and view the results directly within the app. The
+                <p class="text-white text-center w-[70%]">Yes, you can run unit tests and view the results directly
+                    within the app. The
                     integrated testing features allow for a streamlined.</p>
 
                 <button
@@ -72,43 +74,99 @@
                     Tickets
                 </button>
 
-                
+
             </div>
 
-               <!-- statistic section starts here -->
-        <div class="absolute bottom-[-10%] left-[25%]">
-            <div class="stats shadow  mx-auto ">
+            <!-- statistic section starts here -->
+            <div class="absolute bottom-[-10%] left-[25%]">
+                <div class="stats shadow  mx-auto ">
 
-                <div class="stat place-items-center">
-                    <div class="stat-title">Downloads</div>
-                    <div class="stat-value">31K</div>
-                    <div class="stat-desc">From January 1st to February 1st</div>
+                    <div class="stat place-items-center">
+                        <div class="stat-title">Downloads</div>
+                        <div class="stat-value">31K</div>
+                        <div class="stat-desc">From January 1st to February 1st</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-title">Users</div>
+                        <div class="stat-value text-secondary">4,200</div>
+                        <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                    </div>
+
+                    <div class="stat place-items-center">
+                        <div class="stat-title">New Registers</div>
+                        <div class="stat-value">1,200</div>
+                        <div class="stat-desc">↘︎ 90 (14%)</div>
+                    </div>
+
                 </div>
-    
-                <div class="stat place-items-center">
-                    <div class="stat-title">Users</div>
-                    <div class="stat-value text-secondary">4,200</div>
-                    <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
-                </div>
-    
-                <div class="stat place-items-center">
-                    <div class="stat-title">New Registers</div>
-                    <div class="stat-value">1,200</div>
-                    <div class="stat-desc">↘︎ 90 (14%)</div>
-                </div>
-    
             </div>
-        </div>
-         <!-- stat section ends here -->
-          
+            <!-- stat section ends here -->
+
         </section>
         <!-- banner section ends here -->
 
-     
-
     </header>
 
-    <main>
+    <main class="my-32">
+
+        <!-- best offer section -->
+        <section class="flex flex-col gap-12">
+            <h1 class="text-center text-5xl font-bold">Best Offers for You</h1>
+
+            <!-- coupon container -->
+            <div class="flex justify-between gap-4">
+
+                <!-- coupon 1 -->
+                <div class="w-1/2 font-inter bg-[#ffbf0f] rounded-3xl flex justify-evenly items-center leading-loose">
+                    <div>
+                        <h1 class="text-4xl font-extrabold">15% OFF</h1>
+                        <p class="font-bold">on your next purchase</p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="theme-font text-4xl font-bold leading-loose">NEW15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+
+                <!-- coupon 2 -->
+                <div class="w-1/2 font-inter bg-[#f78c9c] rounded-3xl flex justify-evenly items-center leading-loose">
+                    <div>
+                        <h1 class="text-4xl font-extrabold">20% OFF</h1>
+                        <p class="font-bold">on your next purchase</p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="theme-font text-4xl font-bold leading-loose">Couple 20</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button
+                class="w-44 mx-auto btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1dd100] mt-4 font-bold border-transparent">See
+                all offers
+            </button>
+
+        </section>
+        <!-- best offer section ends here -->
+
+        <!-- ticket booking section starts here -->
+        <section>
+            <h1 class="">P.H Paribahan</h1>
+            <p>
+                Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                features allow for a streamlined.
+            </p>
+        </section>
 
     </main>
 
