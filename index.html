@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body class="w-full lg:w-[85%] mx-auto">
 
     <header>
 
@@ -32,14 +32,14 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl font-medium">
                             <li><a>Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a>Destination</a></li>
-                        <li><a>Search</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">T-Travel</a>
+                    <a class="btn btn-ghost text-4xl font-extrabold">T-Travel</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
@@ -50,17 +50,61 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn">Button</a>
+                    <a class="btn bg-[#1cd10029] font-bold">Bus <img src="images/bus-icon.png" alt=""></a>
                 </div>
             </div>
+
         </nav>
         <!-- navbar section ends here -->
 
         <!-- banner section starts here -->
-        <section>
+        <section class="bg-[url(images/banner.png)] bg-center bg-cover bg-no-repeat rounded-3xl relative">
+            <div class="pt-6 pb-[130px] flex flex-col justify-center items-center gap-4">
 
+                <h1 class="text-6xl font-extrabold text-white leading-relaxed">End-to-End Travel With <br> <span
+                        class="text-[#1dd100] flex justify-center">P-Paribahan</span></h1>
+
+                <p class="text-white text-center w-[70%]">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined.</p>
+
+                <button
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1dd100] mt-4 font-bold border-transparent">Buy
+                    Tickets
+                </button>
+
+                
+            </div>
+
+               <!-- statistic section starts here -->
+        <div class="absolute bottom-[-10%] left-[25%]">
+            <div class="stats shadow  mx-auto ">
+
+                <div class="stat place-items-center">
+                    <div class="stat-title">Downloads</div>
+                    <div class="stat-value">31K</div>
+                    <div class="stat-desc">From January 1st to February 1st</div>
+                </div>
+    
+                <div class="stat place-items-center">
+                    <div class="stat-title">Users</div>
+                    <div class="stat-value text-secondary">4,200</div>
+                    <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                </div>
+    
+                <div class="stat place-items-center">
+                    <div class="stat-title">New Registers</div>
+                    <div class="stat-value">1,200</div>
+                    <div class="stat-desc">↘︎ 90 (14%)</div>
+                </div>
+    
+            </div>
+        </div>
+         <!-- stat section ends here -->
+          
         </section>
         <!-- banner section ends here -->
+
+     
 
     </header>
 
