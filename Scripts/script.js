@@ -147,6 +147,10 @@ function getValue() {
     const input = document.getElementById('phone-number');
     let inputValue = input.value;
     console.log(inputValue.length);
+
+    if(inputValue.length==11){
+        document.getElementById('next-button')
+    }
 }
 
 
