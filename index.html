@@ -14,9 +14,9 @@
 
     <script>
         function showAlert() {
-          alert ("Hello world!");
+            alert("Hello world!");
         }
-        </script>
+    </script>
 
 </head>
 
@@ -201,7 +201,7 @@
                     </div>
 
                     <!-- alert section -->
-                    
+
 
                     <!-- route and time -->
                     <div class="font-semibold text-xl px-6 py-6 border bg-[#f7f8f8] rounded-2xl">
@@ -239,9 +239,9 @@
             <!-- token container ends -->
 
             <!-- seat selector container -->
-            <div class="mx-28 rounded-3xl bg-white flex ">
+            <div class="mx-28  rounded-3xl bg-white flex ">
                 <!-- seat distribution -->
-                <div class="min-w-[48%]">
+                <div class="w-[60%] my-4  border-r border-dashed border-gray-600">
 
                     <h1 class="mx-6 py-6 border-b border-dashed border-gray-600 text-xl font-bold">Select Your Seat</h1>
 
@@ -288,8 +288,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- selected seat info container-->
-                <div class="min-w-[48%] px-8">
+                <div class="min-w-[48%] my-4 px-8">
                     <h1 class="py-6 border-b border-dashed border-gray-600 text-xl font-bold">Select Your Seat</h1>
 
                     <!-- selected seat info -->
@@ -304,7 +305,7 @@
                         </div>
 
                         <!-- selected seat no will be shown below -->
-                        <div >
+                        <div>
                             <div id="selected-seat" class=" flex justify-between items-center ">
                                 <p id="seat-number" class="pl-3"></p>
                                 <p id="seat-class" class="pl-7"></p>
@@ -326,8 +327,8 @@
                                 <p id="seat-4-fair"></p>
                             </div>
 
-                            
-                        
+
+
                         </div>
 
                         <div class="flex justify-between border-y py-3 border-gray-400" class="">
@@ -338,13 +339,13 @@
 
                         <div class="flex justify-between">
 
-                            <input type="text" placeholder="Have any coupon ??"
-                               id="coupon-input" class="input input-bordered w-full max-w-xs" />
+                            <input type="text" placeholder="Have any coupon ??" id="coupon-input"
+                                class="input input-bordered w-full max-w-xs" />
                             <button id="apply-button" class="btn bg-[#1dd100]">Apply</button>
 
                         </div>
 
-                        <div  class="flex justify-between">
+                        <div class="flex justify-between">
                             <p>Grand Total</p>
                             <p>BDT <span id="grand-total">000</span></p>
                         </div>
@@ -352,7 +353,7 @@
 
                     <div class="flex flex-col items-center gap-6">
                         <!-- other inputs -->
-                        <div class="text-left">
+                        <div class="text-left mt-8">
                             <h3>Passenger Name :</h3>
                             <input type="text" placeholder="Enter Your Name"
                                 class="input input-bordered w-full max-w-xs" />
@@ -367,11 +368,35 @@
                             <input type="email" placeholder="Enter Your email"
                                 class="input input-bordered w-full max-w-xs ali" />
                         </div>
-                        <button class="btn btn-block bg-[#1dd100]">Next</button>
+                        <button class="btn btn-block bg-[#1dd100]" onclick="my_modal_1.showModal()">Next</button>
                     </div>
                 </div>
             </div>
 
+        </section>
+
+        <!-- modal section -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box px-20 flex flex-col justify-center items-center">
+                    <img src="images/success.png" alt="">
+                    <h3 class="font-bold text-lg my-4">SUCCESS</h3>
+                    <p class="py-4 text-center">
+                        Thank you for Booking Our Bus Seats.
+                        We are working hard to find the best service and deals for you.
+                        Shortly you will find a confirmation in your email.
+                    </p>
+                    <div class="modal-action">
+                        <form method="dialog flex justify-center">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn px-10 text-white font-medium bg-[#27AE60] rounded-full">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </section>
 
     </main>
