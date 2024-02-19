@@ -12,9 +12,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- icons cdn -->
-    <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
-
+    <script>
+        function showAlert() {
+          alert ("Hello world!");
+        }
+        </script>
 
 </head>
 
@@ -81,24 +83,24 @@
             </div>
 
             <!-- statistic section starts here -->
-            <div class="absolute bottom-[-10%] left-[25%]">
+            <div class="absolute bottom-[-10%] left-[25%] translate-x-[-10%]">
                 <div class="stats shadow  mx-auto ">
 
                     <div class="stat place-items-center">
-                        <div class="stat-title">Downloads</div>
-                        <div class="stat-value">31K</div>
+                        <div class="stat-value">500K</div>
+                        <div class="stat-title">Registered Users</div>
                         <div class="stat-desc">From January 1st to February 1st</div>
                     </div>
 
                     <div class="stat place-items-center">
-                        <div class="stat-title">Users</div>
-                        <div class="stat-value text-secondary">4,200</div>
+                        <div class="stat-value text-secondary">1.7 lacks</div>
+                        <div class="stat-title">Tickets Sold</div>
                         <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
                     </div>
 
                     <div class="stat place-items-center">
-                        <div class="stat-title">New Registers</div>
-                        <div class="stat-value">1,200</div>
+                        <div class="stat-value">80k +</div>
+                        <div class="stat-title">Rental Partners</div>
                         <div class="stat-desc">↘︎ 90 (14%)</div>
                     </div>
 
@@ -173,10 +175,10 @@
             </div>
 
             <!-- token container below -->
-            <div class="mx-28  bg-white flex rounded-2xl">
+            <div class="mx-28  bg-white flex rounded-3xl">
 
                 <!-- route details container -->
-                <div class="flex flex-col gap-7 mx-8 py-6 ">
+                <div class="flex flex-col gap-7 mx-8 py-8 ">
 
                     <!-- route details heading -->
                     <div class=" flex justify-between ">
@@ -192,10 +194,14 @@
                             class="w-auto mx-0 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1cd1004a] font-bold border-transparent">
                             <div class="m-0 flex gap-2 items-center">
                                 <p><img src="images/seat-green.png" alt=""></p>
-                                <p>40 seats left</p>
+                                <!-- change-able -->
+                                <p><span id="seats-left">8</span> seats left</p>
                             </div>
                         </button>
                     </div>
+
+                    <!-- alert section -->
+                    
 
                     <!-- route and time -->
                     <div class="font-semibold text-xl px-6 py-6 border bg-[#f7f8f8] rounded-2xl">
@@ -233,11 +239,11 @@
             <!-- token container ends -->
 
             <!-- seat selector container -->
-            <div class="mx-28 rounded-2xl bg-white flex ">
+            <div class="mx-28 rounded-3xl bg-white flex ">
                 <!-- seat distribution -->
                 <div class="min-w-[48%]">
 
-                    <h1 class="py-6 border-b border-dashed border-gray-600 text-xl font-bold">Select Your Seat</h1>
+                    <h1 class="mx-6 py-6 border-b border-dashed border-gray-600 text-xl font-bold">Select Your Seat</h1>
 
                     <div class="flex justify-between px-8">
                         <div class="w-full flex justify-between  py-4 border-b border-dashed border-gray-600">
@@ -254,17 +260,17 @@
                     </div>
 
                     <!-- seats -->
-                    <div class="flex flex-col gap-4">
+                    <div id="seats-container" class="flex flex-col gap-4">
                         <!-- line 1 -->
                         <div class="flex justify-around items-center mt-6">
                             <p>A</p>
                             <p>
-                                <button class="btn w-20">A1</button>
-                                <button class="btn w-20">A2</button>
+                                <button id="A1" class="btn w-20 seat">A1</button>
+                                <button id="A2" class="btn w-20 seat">A2</button>
                             </p>
                             <p>
-                                <button class="btn w-20">A3</button>
-                                <button class="btn w-20">A4</button>
+                                <button id="A3" class="btn w-20 seat">A3</button>
+                                <button id="A4" class="btn w-20 seat">A4</button>
                             </p>
                         </div>
 
@@ -272,12 +278,12 @@
                         <div class="flex justify-around items-center">
                             <p>B</p>
                             <p>
-                                <button class="btn w-20">B1</button>
-                                <button class="btn w-20">B2</button>
+                                <button id="B1" class="btn w-20 seat">B1</button>
+                                <button id="B2" class="btn w-20 seat">B2</button>
                             </p>
                             <p>
-                                <button class="btn w-20">B3</button>
-                                <button class="btn w-20">B4</button>
+                                <button id="B3" class="btn w-20 seat">B3</button>
+                                <button id="B4" class="btn w-20 seat">B4</button>
                             </p>
                         </div>
                     </div>
@@ -288,27 +294,43 @@
 
                     <!-- selected seat info -->
                     <div class=" flex flex-col gap-5">
-                        <div class="font-semibold flex justify-between">
-                            <p>Seat</p>
+                        <div class="font-semibold flex justify-between pt-4">
+                            <p class="flex gap-2">
+                                <span class="block">Seat</span>
+                                <span id="no-of-seats-selected" class="block w-8 bg-[#1dd100] rounded-xl"> 0 </span>
+                            </p>
                             <p>Class</p>
                             <p>Price</p>
                         </div>
 
                         <!-- selected seat no will be shown below -->
-                        <div class="border-b border-gray-400">
-                            <div class="flex justify-between">
-                                <p>NULL</p>
-                                <p>Economy</p>
-                                <p>550</p>
+                        <div >
+                            <div id="selected-seat" class=" flex justify-between items-center ">
+                                <p id="seat-number" class="pl-3"></p>
+                                <p id="seat-class" class="pl-7"></p>
+                                <p id="seat-fair"></p>
                             </div>
-                            <div class="flex justify-between">
-                                <p>NULL</p>
-                                <p>Economy</p>
-                                <p>550</p>
+                            <div id="selected-seat" class="flex justify-between items-center">
+                                <p id="seat-2-number" class="pl-3"></p>
+                                <p id="seat-2-class" class="pl-7"></p>
+                                <p id="seat-2-fair"></p>
                             </div>
+                            <div id="selected-seat" class="flex justify-between items-center">
+                                <p id="seat-3-number" class="pl-3"></p>
+                                <p id="seat-3-class" class="pl-7"></p>
+                                <p id="seat-3-fair"></p>
+                            </div>
+                            <div id="selected-seat" class="flex justify-between items-center">
+                                <p id="seat-4-number" class="pl-3"></p>
+                                <p id="seat-4-class" class="pl-7"></p>
+                                <p id="seat-4-fair"></p>
+                            </div>
+
+                            
+                        
                         </div>
 
-                        <div class="flex justify-between">
+                        <div class="flex justify-between border-y py-3 border-gray-400" class="">
                             <p>Total Price</p>
                             <p id="total-price"> 000 </p>
 
@@ -316,14 +338,15 @@
 
                         <div class="flex justify-between">
 
-                            <input type="text" placeholder="Have any coupon ??" class="input input-bordered w-full max-w-xs" />
-                            <button class="btn bg-[#1dd100]">Apply</button>
+                            <input type="text" placeholder="Have any coupon ??"
+                               id="coupon-input" class="input input-bordered w-full max-w-xs" />
+                            <button id="apply-button" class="btn bg-[#1dd100]">Apply</button>
 
                         </div>
 
-                        <div class="flex justify-between">
+                        <div  class="flex justify-between">
                             <p>Grand Total</p>
-                            <p>BDT <span>000</span></p>
+                            <p>BDT <span id="grand-total">000</span></p>
                         </div>
                     </div>
 
@@ -356,6 +379,7 @@
     <footer>
 
     </footer>
+    <script src="Scripts/script.js"></script>
 </body>
 
 </html>
