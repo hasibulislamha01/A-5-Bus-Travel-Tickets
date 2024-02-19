@@ -20,20 +20,10 @@ function changeBg(seats) {
         seat.addEventListener('click', function () {
             sitNo = seat.innerText
             console.log('selected seat no is :', sitNo)
-            // const sitNo = document.createElement('p')
-
-            // document.getElementById(sitNo).innerText=sitNo;
+            
 
             const selectedSeat = document.getElementById('selected-seat')
             console.log(selectedSeat.innerText)
-
-
-
-
-
-
-
-
 
 
             seatsObject.seatNo = sitNo;
@@ -60,9 +50,10 @@ function changeBg(seats) {
                     const input = document.getElementById('coupon-input');
                     let inputValue = input.value;
                     console.log(typeof inputValue);
-                    couponCode = 'NEW15';
+                    couponCode1 = 'NEW15';
+                    couponCode2 = 'Couple 20';
 
-                    if (inputValue === couponCode) {
+                    if (inputValue === couponCode1) {
                         console.log('matched')
                         totalFair = document.getElementById('total-price').innerText;
                         console.log(totalFair)
@@ -72,6 +63,29 @@ function changeBg(seats) {
                         const discount = totalFair*15/100;
                         console.log('discount',discount)
                         grandTotal.innerText=totalFair-discount;
+
+                        const discountContainer =  document.getElementById('text')
+                        const amountContainer = document.getElementById('amount')
+                        const discountTextD = document.createElement('p');
+                        const discountAmountD = document.createElement('p');
+                        const discountText = discountTextD.innerText='Discount';
+                        const discountAmount = discountAmountD.innerText=discount;
+                        console.log(discountText, discountAmount)
+                        discountContainer.appendChild(discountText)
+                        amountContainer.appendChild(discountAmount)
+                    }
+                    else if (inputValue === couponCode2) {
+                        console.log('matched')
+                        totalFair = document.getElementById('total-price').innerText;
+                        console.log(totalFair)
+                        input.classList.add('hidden')
+                        applyButton.classList.add('hidden')
+
+                        const discount = totalFair*20/100;
+                        console.log('discount',discount)
+                        grandTotal.innerText=totalFair-discount;
+
+
                     }
                     else {
                         console.log('did not matched')
@@ -111,10 +125,7 @@ function changeBg(seats) {
                     document.getElementById('seat-4-number').innerText = seatsObject.seatNo;
                     console.log(seatsObject);
                 }
-                // const x = document.getElementById('seat-number')
-                // const y = document.createElement('span')
-                // y.innerText='hellow world'
-                // x.appendChild(y)
+                
 
             }
             else {
@@ -129,7 +140,13 @@ function changeBg(seats) {
     }
 }
 
-console.log('totalfair is', totalFair)
-const couponInput = document.getElementById('coupon-input').value
-console.log(couponInput)
+const userPhoneInput = document.getElementById('phone-number');
+const userPhone = userPhoneInput.value;
+console.log()
+function getValue() {
+    const input = document.getElementById('phone-number');
+    let inputValue = input.value;
+    console.log(inputValue.length);
+}
+
 
